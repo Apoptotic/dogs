@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
-import NavigationLinksContainer from "./NavigationLinksContainer";
+import NavBar from "./NavBar";
 
 function Header() {
   return (
     <StyledHeader>
       <Logo />
-      <NavigationLinksContainer />
+      <NavBar />
     </StyledHeader>
   );
 }
@@ -18,6 +18,9 @@ const StyledHeader = styled.header`
   background: #2d2d2d;
   color: #ffffff;
   position: relative;
+  @media screen and (max-width: 750px) {
+    justify-content: start;
+  }
 `;
 
 export default Header;

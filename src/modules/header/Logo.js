@@ -10,11 +10,15 @@ const StyledImg = styled.img.attrs({
   src: LogoSvg,
   alt: "Logo"
 })`
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-  height: 80%;
+  display: none;
+  @media screen and (min-width: 850px) {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    height: 80%;
+  }
 `;
 
 export default Logo;

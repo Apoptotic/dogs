@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NAVIGATION_LINKS } from "./constants";
 import NavigationLink from "./NavigationLink";
 
-function NavigationLinksContainer() {
+function NavBar() {
   return (
     <StyledUl>
       {NAVIGATION_LINKS.map(({ id, to, text }) => (
@@ -17,9 +17,11 @@ function NavigationLinksContainer() {
 
 const StyledUl = styled.ul`
   display: flex;
-  justify-content: center;
   padding: 20px;
   margin: 0;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledLi = styled.li`
@@ -32,4 +34,4 @@ const StyledLi = styled.li`
   }
 `;
 
-export default NavigationLinksContainer;
+export default NavBar;
