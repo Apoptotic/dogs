@@ -22,6 +22,6 @@ export const DOG_IMAGES = [
   },
   {
     id: 6,
-    src: "https://images.dog.ceo/breeds/shiba/shiba-1.jpg"
+    src: "https://images.dog.ceo/breeds/akita/Japaneseakita.jpg"
   }
 ];
