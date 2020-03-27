@@ -1,17 +1,17 @@
 export const NAVIGATION_LINKS = [
   {
     id: 1,
-    to: "/home",
+    to: "/",
     text: "home"
   },
   {
     id: 2,
-    to: "/breedList",
+    to: "/breed-list",
     text: "breed list"
   },
   {
     id: 3,
-    to: "/subBreedList",
+    to: "/sub-breed-list",
     text: "sub-breed list"
   },
   {
