@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 function NavigationLink({ to, text }) {
   return (
     <StyledNavLink>
-      <NavLink to={to}>{text}</NavLink>
+      <NavLink exact to={to}>
+        {text}
+      </NavLink>
     </StyledNavLink>
   );
 }

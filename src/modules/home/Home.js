@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { DOG_IMAGES } from "./constants";
+import CareAndHelpWrapper from "../care&help/CareAndHelpWrapper";
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
           <StyledImg key={id} src={src} alt="dog" />
         ))}
       </StyledSection>
+      <CareAndHelpWrapper />
     </>
   );
 }
