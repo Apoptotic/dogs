@@ -49,7 +49,7 @@ const StyledImg = styled.img.attrs(() => ({
   alt: "Dog"
 }))`
   border: 5px solid #2d2d2d;
-  margin: 5px;
+  margin: 1rem;
   width: 35rem;
 `;
 

@@ -7,9 +7,8 @@ function CareAndHelpWrapper() {
   return (
     <StyledContainer>
       {CARE_AND_HELP.map(({ id, title, icon, description, readMoreLink }) => (
-        <StyledWrapper>
+        <StyledWrapper key={id}>
           <CareAndHelp
-            key={id}
             title={title}
             icon={icon}
             description={description}
