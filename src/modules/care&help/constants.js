@@ -14,7 +14,7 @@ export const CARE_AND_HELP = [
   },
   {
     id: 2,
-    title: "Dog care & nutrition",
+    title: "Dog health problems",
     icon: {
       color: "red",
       src: faSyringe
@@ -25,7 +25,7 @@ export const CARE_AND_HELP = [
   },
   {
     id: 3,
-    title: "Dog care & nutrition",
+    title: "Express help for your dog",
     icon: {
       color: "blue",
       src: faMedkit
