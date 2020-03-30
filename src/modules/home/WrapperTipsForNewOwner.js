@@ -6,7 +6,7 @@ import TipForNewOwner from "./TipForNewOwner";
 function WrapperTipsForNewOwner() {
   return (
     <StyledContainer>
-      <StyledTitle>Tips for new owners</StyledTitle>
+      <StyledTitle>Tips for new dog owners</StyledTitle>
       <StyledWrapper>
         {TIPS_FOR_NEW_OWNER.map(({ id, tipNumber, title, description }) => (
           <StyledTipForNewOwnerWrapper key={id}>

@@ -5,6 +5,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { DOG_IMAGES } from "./constants";
 import WrapperCareAndHelp from "./WrapperCareAndHelp";
 import WrapperTipsForNewOwner from "./WrapperTipsForNewOwner";
+import Footer from "../footer/Footer";
 
 function Home() {
   return (
@@ -29,6 +30,7 @@ function Home() {
       </StyledSection>
       <WrapperCareAndHelp />
       <WrapperTipsForNewOwner />
+      <Footer />
     </>
   );
 }
