@@ -30,7 +30,6 @@ function Home() {
       </StyledSection>
       <WrapperCareAndHelp />
       <WrapperTipsForNewOwner />
-      <Footer />
     </>
   );
 }

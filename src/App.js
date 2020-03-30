@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./modules/header/Header";
 import Home from "./modules/home/Home";
+import Footer from "./modules/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }
