@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CareAndHelp from "./CareAndHelp";
 import { CARE_AND_HELP } from "./constants";
 
-function CareAndHelpWrapper() {
+function WrapperCareAndHelp() {
   return (
     <StyledContainer>
       {CARE_AND_HELP.map(({ id, title, icon, description, readMoreLink }) => (
@@ -32,4 +32,4 @@ const StyledWrapper = styled.div`
   margin: 2rem 1rem;
 `;
 
-export default CareAndHelpWrapper;
+export default WrapperCareAndHelp;
