@@ -28,7 +28,7 @@ const StyledContainer = styled.section`
 `;
 
 const StyledWrapper = styled.div`
-  max-width: 35rem;
+  max-width: 25rem;
   margin: 2rem 1rem;
 `;
 

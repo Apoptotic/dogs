@@ -31,7 +31,7 @@ const StyledContainer = styled.section`
 
 const StyledTitle = styled.h3`
   text-align: center;
-  font-size: 48px;
+  font-size: 33px;
   color: #dededec9;
 `;
 
@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTipForNewOwnerWrapper = styled.div`
-  max-width: 35rem;
+  max-width: 25rem;
   margin: 2rem 1rem;
 `;
 

@@ -5,7 +5,6 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { DOG_IMAGES } from "./constants";
 import WrapperCareAndHelp from "./WrapperCareAndHelp";
 import WrapperTipsForNewOwner from "./WrapperTipsForNewOwner";
-import Footer from "../footer/Footer";
 
 function Home() {
   return (
@@ -39,13 +38,17 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledDescription = styled.p`
-  margin-left: 2rem;
+  margin: 0 6rem;
+  @media screen and (max-width: 800px) {
+    margin: 0 2rem;
+  }
 `;
 
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 6rem;
 `;
 
 const StyledImg = styled.img.attrs(() => ({
@@ -53,7 +56,7 @@ const StyledImg = styled.img.attrs(() => ({
 }))`
   border: 5px solid #2d2d2d;
   margin: 1rem;
-  width: 35rem;
+  width: 25rem;
 `;
 
 export default Home;
