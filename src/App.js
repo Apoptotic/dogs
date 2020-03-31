@@ -4,6 +4,7 @@ import { StylesProvider } from "@material-ui/core/styles";
 import Header from "./modules/header/Header";
 import Home from "./modules/home/Home";
 import Footer from "./modules/footer/Footer";
+import BreedsList from "./modules/breeds/BreedsList";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/breed-list">
-          <h1>BreedList</h1>
+          <BreedsList />
         </Route>
         <Route path="/">
           <Home />

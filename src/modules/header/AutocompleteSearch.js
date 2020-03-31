@@ -32,7 +32,6 @@ function AutocompleteSearch() {
     <StyledSearchContainer
       onChange={handleSelectedOption}
       options={breedList}
-      open
       getOptionLabel={option => option.title}
       renderInput={params => (
         <TextField {...params} label="Search Dogs" variant="filled" />
