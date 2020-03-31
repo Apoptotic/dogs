@@ -9,9 +9,7 @@ function Header() {
     <StyledHeader>
       <Logo />
       <NavBar />
-      <StyledSearchContainer>
-        <AutocompleteSearch />
-      </StyledSearchContainer>
+      <AutocompleteSearch />
     </StyledHeader>
   );
 }
@@ -22,18 +20,9 @@ const StyledHeader = styled.header`
   background: #2d2d2d;
   color: #ffffff;
   position: relative;
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 1000px) {
     justify-content: start;
   }
-`;
-
-const StyledSearchContainer = styled.div`
-  width: 15%;
-  position: absolute;
-  top: 50%;
-  right: 3%;
-  transform: translateY(-50%);
-  background-color: #ffffff;
 `;
 
 export default Header;

@@ -11,7 +11,7 @@ const StyledImg = styled.img.attrs({
   alt: "Logo"
 })`
   display: none;
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 1001px) {
     display: flex;
     position: absolute;
     top: 50%;

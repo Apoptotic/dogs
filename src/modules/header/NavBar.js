@@ -19,7 +19,7 @@ const StyledUl = styled.ul`
   display: flex;
   padding: 20px;
   margin: 0;
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
   }
 `;
