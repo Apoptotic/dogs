@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import NavBar from "./NavBar";
-import Search from "./Search";
+import AutocompleteSearch from "./AutocompleteSearch";
 
 function Header() {
   return (
@@ -10,7 +10,7 @@ function Header() {
       <Logo />
       <NavBar />
       <StyledSearchContainer>
-        <Search />
+        <AutocompleteSearch />
       </StyledSearchContainer>
     </StyledHeader>
   );
