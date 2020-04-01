@@ -1,24 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import { Route, Switch } from "react-router-dom";
 import { BREEDS_LIST } from "./constants";
 import BreedsListItem from "./BreedsListItem";
+import BreedDetails from "./BreedDetails";
 
 function BreedsList() {
   return (
-    <>
-      <StyledTitle>Breeds List</StyledTitle>
-      <StyledContainer>
-        {BREEDS_LIST.map(({ id, title, description, imgSrc }) => (
-          <StyledBreedsListItem key={id}>
-            <BreedsListItem
-              title={title}
-              description={description}
-              imgSrc={imgSrc}
-            />
-          </StyledBreedsListItem>
-        ))}
-      </StyledContainer>
-    </>
+    <Switch>
+      <Route path="/breed-list/:breedName">
+        <BreedDetails />
+      </Route>
+      <Route>
+        <StyledTitle>Breeds List</StyledTitle>
+        <StyledContainer>
+          {BREEDS_LIST.map(({ id, title, description, imgSrc }) => (
+            <StyledBreedsListItem key={id}>
+              <BreedsListItem
+                title={title}
+                description={description}
+                imgSrc={imgSrc}
+              />
+            </StyledBreedsListItem>
+          ))}
+        </StyledContainer>
+      </Route>
+    </Switch>
   );
 }
 

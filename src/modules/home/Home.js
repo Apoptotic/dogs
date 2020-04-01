@@ -51,9 +51,7 @@ const StyledSection = styled.section`
   margin: 0 6rem;
 `;
 
-const StyledImg = styled.img.attrs(() => ({
-  alt: "Dog"
-}))`
+const StyledImg = styled.img`
   border: 5px solid #2d2d2d;
   margin: 1rem;
   width: 25rem;

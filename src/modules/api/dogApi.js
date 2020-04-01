@@ -13,3 +13,12 @@ async function fetchGet(url) {
 export function getBreedsList() {
   return fetchGet("https://dog.ceo/api/breeds/list/all");
 }
+
+export function getBreedImages(breedName) {
+  const isSubBreed = breedName.includes("-");
+  if (isSubBreed) {
+    const [breed, subBreed] = breedName.split("-");
+    return fetchGet(`https://dog.ceo/api/breed/${breed}/${subBreed}/images`);
+  }
+  return fetchGet(`https://dog.ceo/api/breed/${breedName}/images`);
+}

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { getBreedsList } from "../api/dogApi";
 
 function AutocompleteSearch() {
+  const history = useHistory();
   const [breedList, setStateBreedList] = useState([]);
 
   useEffect(() => {
@@ -12,9 +14,9 @@ function AutocompleteSearch() {
       .then(({ message }) => {
         const list = [];
         Object.keys(message).forEach(breed => {
-          list.push({ title: breed });
+          list.push({ name: breed });
           message[breed].forEach(subBreed => {
-            list.push({ title: `${breed}-${subBreed}` });
+            list.push({ name: `${breed}-${subBreed}` });
           });
         });
         setStateBreedList(list);
@@ -25,14 +27,17 @@ function AutocompleteSearch() {
   }, []);
 
   const handleSelectedOption = (event, option) => {
-    console.log(option);
+    if (option) {
+      const { name } = option;
+      history.push(`/breed-list/${name}`);
+    }
   };
 
   return (
     <StyledSearchContainer
       onChange={handleSelectedOption}
       options={breedList}
-      getOptionLabel={option => option.title}
+      getOptionLabel={option => option.name}
       renderInput={params => (
         <TextField {...params} label="Search Dogs" variant="filled" />
       )}
