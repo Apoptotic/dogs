@@ -11,11 +11,6 @@ export const NAVIGATION_LINKS = [
   },
   {
     id: 3,
-    to: "/sub-breed-list",
-    text: "sub-breed list"
-  },
-  {
-    id: 4,
     to: "/about",
     text: "about"
   }

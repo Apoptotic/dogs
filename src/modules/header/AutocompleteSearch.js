@@ -33,9 +33,19 @@ function AutocompleteSearch() {
     }
   };
 
+  const handleEnterKeyPress = event => {
+    const {
+      key,
+      target: { value }
+    } = event;
+    if (value && key === "Enter") {
+      history.push(`/breed-list/${value}`);
+    }
+  };
   return (
     <StyledSearchContainer
       onChange={handleSelectedOption}
+      onKeyUp={handleEnterKeyPress}
       options={breedList}
       getOptionLabel={option => option.name}
       renderInput={params => (

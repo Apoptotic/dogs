@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function BreedsListItem({ title, description, imgSrc }) {
+function BreedsListItem({ onClick, title, description, imgSrc }) {
   return (
     <>
       <StyledWrapper>
@@ -9,7 +9,12 @@ function BreedsListItem({ title, description, imgSrc }) {
         <StyledDescription>{description}</StyledDescription>
       </StyledWrapper>
       <StyledImgWrapper>
-        <img src={imgSrc} alt="dog" />
+        <StyledImg
+          type="image"
+          src={imgSrc}
+          alt="dog"
+          onClick={() => onClick(title)}
+        />
       </StyledImgWrapper>
     </>
   );
@@ -37,6 +42,11 @@ const StyledImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+`;
+
+const StyledImg = styled.input`
+  display: flex;
+  max-width: 100%;
 `;
 
 export default BreedsListItem;

@@ -1,11 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import { BREEDS_LIST } from "./constants";
 import BreedsListItem from "./BreedsListItem";
 import BreedDetails from "./BreedDetails";
 
 function BreedsList() {
+  const history = useHistory();
+
+  const handleBreedNameClick = breedName => {
+    if (breedName === "German shepherd") {
+      // eslint-disable-next-line no-param-reassign
+      breedName = "germanshepherd";
+    }
+    history.push(`/breed-list/${breedName.toLowerCase()}`);
+  };
+
   return (
     <Switch>
       <Route path="/breed-list/:breedName">
@@ -17,6 +27,7 @@ function BreedsList() {
           {BREEDS_LIST.map(({ id, title, description, imgSrc }) => (
             <StyledBreedsListItem key={id}>
               <BreedsListItem
+                onClick={handleBreedNameClick}
                 title={title}
                 description={description}
                 imgSrc={imgSrc}
