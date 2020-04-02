@@ -12,7 +12,6 @@ function BreedDetails() {
 
   const [breedImages, setStateBreedImages] = useState([]);
   const [pageNumber, setStatePageNumber] = useState(1);
-  const [description, setStateDescription] = useState("");
 
   useEffect(() => {
     getBreedImages(breedName).then(response => {
@@ -50,7 +49,6 @@ function BreedDetails() {
   return (
     <>
       <StyledTitle>{breedName}</StyledTitle>
-      <StyledDescription>{description}</StyledDescription>
       {gallery.length ? (
         <>
           <StyledPageNumberContainer>
@@ -84,10 +82,6 @@ const StyledTitle = styled.h4`
   color: red;
   text-transform: uppercase;
   text-align: center;
-`;
-const StyledDescription = styled.p`
-  font-size: 1rem;
-  margin: 0;
 `;
 
 const StyledGallery = styled.section`
