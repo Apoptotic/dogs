@@ -82,6 +82,8 @@ function BreedDetails() {
 
 const StyledTitle = styled.h4`
   color: red;
+  text-transform: uppercase;
+  text-align: center;
 `;
 const StyledDescription = styled.p`
   font-size: 1rem;
