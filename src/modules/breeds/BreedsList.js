@@ -9,10 +9,6 @@ function BreedsList() {
   const history = useHistory();
 
   const handleBreedNameClick = breedName => {
-    if (breedName === "German shepherd") {
-      // eslint-disable-next-line no-param-reassign
-      breedName = "germanshepherd";
-    }
     history.push(`/breed-list/${breedName.toLowerCase()}`);
   };
 
