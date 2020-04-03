@@ -38,7 +38,7 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledDescription = styled.p`
-  margin: 0 6rem;
+  margin: 0 15rem;
   @media screen and (max-width: 800px) {
     margin: 0 2rem;
   }
